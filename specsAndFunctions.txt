@@ -1,0 +1,129 @@
+1.) available spec attributes, may be selected depending on the actual vehicle/tool
+usage example:
+
+<storeData>
+    <specs>
+        <spec>...</spec>
+        <spec>...</spec>
+        ...
+    </specs>
+</storeData>
+
+
+available specifications (use instead of <spec>...</spec>):
+
+<power>123</power>                          engine power in hp/ps (kW value is calculated by the game)
+
+<workingWidth>4.5</workingWidth>            working width in meters
+
+<neededPower>123</neededPower>              required engine power in hp/ps to operate implement
+
+<combination>vehicle name</combination>     a tool/vehicle, which fits to this tool/vehicle (e.g. combine for cutter)
+                                            supported values: text or localization key e.g. $l10n_shopItemName_caseIH3020Cutter
+
+<fillTypeCategories></fillTypeCategories>   fillTypes displayed in shop (functions as override for type(s) defined in cutterFruitTypes or fillUnit)
+                                            supported values: bulk, liquid, windrow, piece, animal, combine, forageHarvester, forageWagon, slurryTank, manureSpreader
+
+specs automatically read/calculated from other xml elements:
+fuelCapacity
+maxSpeed
+capacity
+fruit/filltypes
+seedFillTypes
+incomePerHour
+
+
+2.) available functions, may be selected depending on the actual vehicle/tool
+usage example:
+
+<storeData>
+    <functions>
+        <function>...</function>
+        <function>...</function>
+        ...
+    </functions>
+</storeData>
+
+
+available functions (add inside a <function></function> element):
+
+$l10n_function_augerWagon
+$l10n_function_baleStacker
+$l10n_function_baleTrailer
+$l10n_function_baleWrapper
+$l10n_function_baler
+$l10n_function_beehive
+$l10n_function_beltSystem
+$l10n_function_bigBagFertilizer
+$l10n_function_bigBagPigFood
+$l10n_function_bigBagSeeds
+$l10n_function_car
+$l10n_function_chainsaw
+$l10n_function_combine
+$l10n_function_combineNeedsCutter
+$l10n_function_cultivator
+$l10n_function_cutter
+$l10n_function_cutterTrailer
+$l10n_function_dolly
+$l10n_function_feeder
+$l10n_function_feederBale
+$l10n_function_fertilizer
+$l10n_function_fillablePallet
+$l10n_function_forageWagon
+$l10n_function_forestryCutter
+$l10n_function_forestryPlanter
+$l10n_function_forestryTransport
+$l10n_function_forestryTreeLimit
+$l10n_function_forestryWoodCrusher
+$l10n_function_frontloader
+$l10n_function_greenHouse
+$l10n_function_harvestingPotato
+$l10n_function_harvestingSelfPropelledPotato
+$l10n_function_harvestingSelfPropelledSugarbeet
+$l10n_function_harvestingSugarbeet
+$l10n_function_haulmTopperPotato
+$l10n_function_haulmTopperSugarbeet
+$l10n_function_hayStorage
+$l10n_function_heatingPlant
+$l10n_function_highPressureWasher
+$l10n_function_leveler
+$l10n_function_liquidFertilizerTank
+$l10n_function_livestockTrailer
+$l10n_function_loadingVehicle
+$l10n_function_lowLoader
+$l10n_function_manureSpreader
+$l10n_function_mower
+$l10n_function_palletPacker
+$l10n_function_placeableChipper
+$l10n_function_plough
+$l10n_function_powerGenerator
+$l10n_function_reverseDriveControl
+$l10n_function_roller
+$l10n_function_saplingPallet
+$l10n_function_semiTrailer
+$l10n_function_siloExtension
+$l10n_function_skidsteer
+$l10n_function_slurryContainer
+$l10n_function_slurrySpreader
+$l10n_function_sowingMachine
+$l10n_function_sowingMachineDirect
+$l10n_function_sprayer
+$l10n_function_sprayerTank
+$l10n_function_stumpCutter
+$l10n_function_tank
+$l10n_function_tedder
+$l10n_function_telehandler
+$l10n_function_tipper
+$l10n_function_tractor
+$l10n_function_tractorFrontloader
+$l10n_function_treeSaw
+$l10n_function_truck
+$l10n_function_waterTower
+$l10n_function_weeder
+$l10n_function_weight
+$l10n_function_wheelLoader
+$l10n_function_windrower
+$l10n_function_workshop
+
+
+note: custom localized functions can be defined and referenced as l10n entries in the modDesc.xml
